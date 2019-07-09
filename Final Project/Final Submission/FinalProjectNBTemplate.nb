@@ -10,40 +10,90 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2508,         74]
-NotebookOptionsPosition[      1520,         44]
-NotebookOutlinePosition[      2344,         72]
-CellTagsIndexPosition[      2301,         69]
+NotebookDataLength[      5382,        130]
+NotebookOptionsPosition[      3963,         94]
+NotebookOutlinePosition[      4807,        122]
+CellTagsIndexPosition[      4764,        119]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["< Project Title >", "Title",
+Cell["\<\
+Extract Data From Discrete Plot Images Using Semantic Segmentation (Pixel \
+Classification)\
+\>", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
-  3.770055604008165*^9, 
-  3.7700556066618843`*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
+  3.770055604008165*^9, 3.7700556066618843`*^9}, {3.7716351329874163`*^9, 
+  3.77163515436526*^9}, {3.771686562699356*^9, 3.7716865745965676`*^9}, {
+  3.771686721263634*^9, 
+  3.7716867678994923`*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
 400d3cc456dd"],
 
-Cell["< First and Last name>", "Text",
+Cell["Wangping Ren", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
-  3.77005561844785*^9, 
-  3.7700556489651537`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+  3.77005561844785*^9, 3.7700556489651537`*^9}, {3.7716351596143084`*^9, 
+  3.7716351621928115`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
 fa93ec9acae9"],
 
-Cell["< Mentor\[CloseCurlyQuote]s First and Last name>", "Text",
+Cell["Jofre Espigule", "Text",
  CellChangeTimes->{{3.549624515773694*^9, 3.5496245246892014`*^9}, {
   3.5498187208956137`*^9, 3.5498187221413403`*^9}, {3.5498190558319674`*^9, 
-  3.54981906151682*^9}, {3.770055624686027*^9, 
-  3.770055659820487*^9}},ExpressionUUID->"b70c649b-a958-4202-9f22-\
-238ea1f9c7d4"]
+  3.54981906151682*^9}, {3.770055624686027*^9, 3.770055659820487*^9}, {
+  3.771635164612446*^9, 
+  3.771635172740754*^9}},ExpressionUUID->"b70c649b-a958-4202-9f22-\
+238ea1f9c7d4"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.771686829562501*^9, 
+  3.77168686252207*^9}},ExpressionUUID->"5f15a0f1-716a-4890-b6cb-\
+e3196b72ca51"],
+
+Cell["\<\
+Discrete plots are one of the charts that are used widely in almost all \
+fields of science, business and industry for the purpose of data \
+virtualization. It is often of great interest to extract the numerical values \
+of the data from discrete plots in the form of images  for further analyzing \
+and processing, such as the analysis of discrete data images from scientific \
+papers. However, most data extraction software requires manual data \
+extraction and axes establishment from the user which is time-consuming. In \
+this project, we present an automated data extraction system for discrete \
+plot images that utilizes a semantic segmentation approach where image pixels \
+are classified as being different parts of the image by using a neural \
+network model called Dilated ResNet-22. \
+\>", "Text",
+ CellChangeTimes->{{3.77168777038048*^9, 3.771687830332409*^9}, {
+   3.7716883990886517`*^9, 3.7716884778798685`*^9}, {3.7716886493104277`*^9, 
+   3.771688763156472*^9}, {3.771689146011486*^9, 3.7716891871910825`*^9}, {
+   3.7716892260679893`*^9, 3.7716892585935087`*^9}, {3.7716893975915146`*^9, 
+   3.771689407132087*^9}, {3.771689438041521*^9, 3.771689542494176*^9}, {
+   3.7716895893125734`*^9, 3.771689725777212*^9}, {3.7716898279883738`*^9, 
+   3.771689991450775*^9}, {3.771690078090725*^9, 3.7716901696324453`*^9}, {
+   3.771690402559539*^9, 3.7716904660018687`*^9}, {3.7716904987620444`*^9, 
+   3.7716905333735557`*^9}, {3.771690590277378*^9, 3.771690728359514*^9}, 
+   3.7716907899169226`*^9},ExpressionUUID->"3f4768bc-4f3d-4f10-863c-\
+7e508b795c67"]
+}, Open  ]],
+
+Cell["Methods", "Section",
+ CellChangeTimes->{{3.771686907577817*^9, 3.7716869292104917`*^9}, {
+  3.771690749117443*^9, 
+  3.7716907649759774`*^9}},ExpressionUUID->"e85d2e99-0653-44e3-ae33-\
+a3fd88384336"],
+
+Cell["Training Dataset Using ", "Section",
+ CellChangeTimes->{{3.771686939139587*^9, 
+  3.7716869696326995`*^9}},ExpressionUUID->"a4a05de2-82be-425a-a915-\
+f40ff1561520"]
 }, Open  ]]
 },
-WindowSize->{720, 855},
-WindowMargins->{{360, Automatic}, {Automatic, 0}},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 DockedCells->{
   Cell[
    TextData[{
@@ -56,8 +106,8 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -72,9 +122,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 213, 4, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
-Cell[796, 28, 364, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1163, 36, 341, 5, 35, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
+Cell[580, 22, 444, 9, 238, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+Cell[1027, 33, 404, 6, 52, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1434, 41, 356, 6, 52, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"],
+Cell[CellGroupData[{
+Cell[1815, 51, 156, 3, 99, "Section",ExpressionUUID->"5f15a0f1-716a-4890-b6cb-e3196b72ca51"],
+Cell[1974, 56, 1580, 23, 220, "Text",ExpressionUUID->"3f4768bc-4f3d-4f10-863c-7e508b795c67"]
+}, Open  ]],
+Cell[3569, 82, 205, 4, 99, "Section",ExpressionUUID->"e85d2e99-0653-44e3-ae33-a3fd88384336"],
+Cell[3777, 88, 170, 3, 76, "Section",ExpressionUUID->"a4a05de2-82be-425a-a915-f40ff1561520"]
 }, Open  ]]
 }
 ]
